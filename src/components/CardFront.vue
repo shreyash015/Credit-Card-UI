@@ -1,18 +1,18 @@
 <template>
   <div class="card-front-container">
     <img class="card-front" src="@/assets/bg-card-front.png" alt="">
-    <div class="inner-card-details md:flex md:flex-col md:justify-between">
+    <div class="inner-card-details  lg:flex lg:flex-col lg:justify-between">
       <div class="lg:px-4">
         <img class="card-logo" src="@/assets/card-logo.svg" alt="">
       </div>
       <div class="card-details-container text-white text-2xl tracking-widest  w-full lg:px-4 py-4">
-        <div class="flex justify-between">
+        <div class="flex justify-between mt-8">
           <div class="inline-block"> {{ (cardNumber.split("").slice(0, 4).join("")) || "0000" }}</div>
           <div class="inline-block"> {{ cardNumber.split("").slice(4, 8).join("") || "0000" }}</div>
           <div class="inline-block"> {{ cardNumber.split("").slice(8, 12).join("") || "0000" }}</div>
           <div class="inline-block"> {{ cardNumber.split("").slice(12, 16).join("") || "0000" }}</div>
         </div>
-        <div class="flex text-base justify-between mt-4 2xl:px-4">
+        <div class="flex text-base justify-between mt-8  2xl:px-4">
           <p class="uppercase">{{ cardholderName || 'Jane Appleseed' }}</p>
           <p>{{ cardMonth || "00" }}/{{ cardYear || "00" }}</p>
         </div>
@@ -54,8 +54,8 @@ export default {
 
 .card-front-container {
   position: relative;
-  /* top: 20%; */
-  width: 400px;
+  top: 20%; 
+  width: 380px;
   height: 223px;
   margin: 0 auto;
 }
