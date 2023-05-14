@@ -2,15 +2,15 @@
 import { ExclamationCircleIcon } from '@heroicons/vue/20/solid'
 </script>
 <template>
-  <div class="xl:h-screen">
-    <div class="lg:flex lg:flex-col xl:grid xl:grid-cols-9 grid">
-      <div class="left-bg max-h-full xl:h-screen xl:col-span-2 relative">
+  <div class="lg:h-screen">
+    <div class="lg:flex lg:flex-col lg:grid lg:grid-cols-9 grid">
+      <div class="left-bg max-h-full lg:h-screen lg:col-span-2 relative">
         <div class="card-container relative">
           <CardFront :cardholderName="cardholderName" :cardNumber="cardNumber" :cardMonth="cardMonth" :cardYear="cardYear"></CardFront>
           <CardBack :cvv="cvv"></CardBack>
         </div>
       </div>
-      <div class="xl:h-screen xl:col-span-7 right-container bg-gray-100">
+      <div class="lg:h-screen lg:col-span-7 right-container bg-gray-100">
         <div v-if="!confirmClicked" class="py-8 form-container h-full flex items-center justify-center">
           <div class="md:w-96 w-64">
             <label for="name" class="block text-sm font-medium leading-6 uppercase  text-gray-900">Cardholder
